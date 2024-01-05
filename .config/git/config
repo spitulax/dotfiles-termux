@@ -1,0 +1,20 @@
+[core]
+    eol = lf
+    editor = nvim
+[diff]
+    tool = "difftool-nvim"
+[difftool "difftool-nvim"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+    prompt = false
+[init]
+    defaultBranch = "main"
+[user]
+    name = "Bintang"
+    email = "bintangadiputrapratama@gmail.com"
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
