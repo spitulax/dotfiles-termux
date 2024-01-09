@@ -69,3 +69,8 @@ setkey("x", "j", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', {expr = true})
 setkey("x", "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', {expr = true})
 
 setkey("t", "<C-x>", vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true))
+
+-- Miscellaneous
+vim.api.nvim_create_user_command("Datetime", function()
+  vim.cmd("r !date '+\\%F \\%R'")
+end, {nargs=0})

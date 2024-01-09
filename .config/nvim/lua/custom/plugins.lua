@@ -85,12 +85,35 @@ local plugins = {
         "lua",
         "python",
         "markdown",
+        "norg",
+        "bash",
+        "fish",
       },
       highlight = {
         enable = true,
         use_languagetree = true,
       },
       indent = { enable = true },
+    },
+  },
+
+  {
+    "nvim-neorg/neorg",
+    ft = "norg",
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      load = {
+        ["core.defaults"] = {},
+        ["core.concealer"] = {},
+        ["core.dirman"] = {
+          config = {
+            workspaces = {
+              notes = "~/notes",
+            },
+          },
+        },
+      },
     },
   },
 }
