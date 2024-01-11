@@ -1,17 +1,13 @@
 ## Requirements
 
-**Do this before installing the configuration!**
+**Install Termux:API before using this configuration!**
 
-- Install Termux:API app [(See the wiki)](https://wiki.termux.com/wiki/Termux:API).
-- Install the required packages.
-```sh
-$ apt install fish neovim git yadm starship neofetch termux-api
-```
+[See the wiki](https://wiki.termux.com/wiki/Termux:API) for further informations.
 
 ## Installation
 
 **Run this to install the configuration.**
 
 ```sh
-$ yadm clone https://github.com/spitulax/dotfiles-termux
+$ yadm clone --bootstrap https://github.com/spitulax/dotfiles-termux
 ```

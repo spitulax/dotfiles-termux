@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+
+# Installing required packages
+apt install fish neovim git yadm starship neofetch termux-api
+
+# Changing the default shell
+chsh -s fish
