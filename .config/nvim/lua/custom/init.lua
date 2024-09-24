@@ -72,6 +72,14 @@ setkey("x", "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', {expr = true})
 
 setkey("t", "<C-x>", vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true))
 
+-- Autocommands
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.cmd("TSEnable highlight")
+    vim.cmd("TSEnable indent")
+  end,
+})
+
 -- Miscellaneous
 vim.api.nvim_create_user_command("Datetime", function()
   vim.cmd("r !date '+\\%F \\%R'")
