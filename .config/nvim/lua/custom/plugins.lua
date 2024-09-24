@@ -82,6 +82,8 @@ local plugins = {
     build = ":TSUpdate",
     opts = {
       ensure_installed = {
+        "c",
+        "cpp",
         "lua",
         "python",
         "markdown",
@@ -101,6 +103,7 @@ local plugins = {
     "nvim-neorg/neorg",
     ft = "norg",
     build = ":Neorg sync-parsers",
+    version = "7.0.0",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       load = {

@@ -51,6 +51,13 @@ function mf --argument ytmlink spotlink
     spotdl download "$ytmlink|$spotlink"
 end
 
+function n
+  set -l pwd $PWD
+  cd $HOME/notes
+  vim .
+  cd $pwd
+end
+
 ### END OF FUNCTIONS ###
 
 ## ALIASES

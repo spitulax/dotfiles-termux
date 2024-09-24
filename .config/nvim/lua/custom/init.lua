@@ -39,11 +39,13 @@ opt.list = true
 
 -- Mappings
 local setkey = vim.keymap.set
+local unsetkey = vim.keymap.del
 
 setkey("n", "!", ":!", {nowait = true})
 setkey("n", "<C-p>", "\"+p")
 setkey("n", "<M-p>", "\"+P")
-setkey("n", "<C-c>", "\"+y")
+setkey("n", "<M-y>", "\"+y")
+setkey("n", "<C-c>", "<cmd>q<cr>")
 setkey("n", "<C-q>", "<cmd>qa<cr>")
 setkey("n", "<C-s>", "<cmd>w<cr>")
 setkey("n", "<M-t>", "<cmd>tabnew<cr>")
