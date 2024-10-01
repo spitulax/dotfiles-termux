@@ -72,6 +72,8 @@ setkey("x", "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', {expr = true})
 
 setkey("t", "<C-x>", vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true))
 
+setkey("n", "<C-f>", "<cmd>NvimTreeToggle<cr>")
+
 -- Autocommands
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
