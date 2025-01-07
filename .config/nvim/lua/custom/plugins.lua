@@ -75,9 +75,8 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    init = function()
-      lazy_load("nvim-treesitter")
-    end,
+    lazy = false,
+    enable = false,
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
     opts = {
@@ -122,9 +121,7 @@ local plugins = {
 
   {
     "nvim-tree/nvim-tree.lua",
-    init = function()
-      lazy_load("nvim-tree.lua")
-    end,
+    lazy = false,
     opts = {
       modified = {
         enable = true,
